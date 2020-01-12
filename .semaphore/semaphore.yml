@@ -13,6 +13,6 @@ blocks:
             - checkout
             - >-
               docker run --rm -it -v ${PWD}:/app -w /app -v
-              ${PWD}/layers:/layers cloudfoundry/cnb:cflinuxfs3
+              ${SEMAPHORE_GIT_DIR}/layers:/layers cloudfoundry/cnb:cflinuxfs3
               /lifecycle/detector -app=/app -group=/layers/group.toml
               -plan=/layers/plan.toml
