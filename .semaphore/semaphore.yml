@@ -11,8 +11,12 @@ blocks:
         - name: Build
           commands:
             - checkout
-            - 'ls -alh '
             - 'docker pull --quiet cloudfoundry/cnb:cflinuxfs3'
+            - >-
+              docker run --rm -it -v ${PWD}:/app -w /app -v alpine bash -c
+              'chown -R "1000:1000" "/builder/home" && chown -R "1000:1000"
+              "/layers" && chown -R "1000:1000" "/cache" && chown -R "1000:1000"
+              "/app"'
             - >-
               docker run --rm -it -v ${PWD}:/app -w /app -v
               $(pwd)/layers:/layers cloudfoundry/cnb:cflinuxfs3
