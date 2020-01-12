@@ -14,4 +14,4 @@ blocks:
             - docker pull --quiet snormore/pack
             - >-
               docker run --rm -it -v $(pwd):/app -e
-              TARGET_IMAGE=snodo/hello-next
+              TARGET_IMAGE=snodo/hello-next snormore/pack
