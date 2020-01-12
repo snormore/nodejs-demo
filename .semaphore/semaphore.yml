@@ -13,5 +13,8 @@ blocks:
             - checkout
             - docker pull --quiet snormore/pack
             - >-
-              docker run --rm -it -v $(pwd):/app -e
-              TARGET_IMAGE=snodo/hello-next snormore/pack
+              docker run --rm -it -v $PWD:/app -e
+              "DOCKER_CONFIG_JSON=${DOCKER_CONFIG_JSON}" -e
+              "TARGET_IMAGE=snodo/hello-next" snormore/pack
+      secrets:
+        - name: registry-snodo
