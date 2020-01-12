@@ -15,6 +15,7 @@ blocks:
             - >-
               docker run --rm -it -v $PWD:/app -e
               "DOCKER_CONFIG_JSON=${DOCKER_CONFIG_JSON}" -e
-              "TARGET_IMAGE=snodo/hello-next" snormore/pack
+              "TARGET_IMAGE=registry.digitalocean.com/snormore/hello-next"
+              snormore/pack
       secrets:
         - name: registry-snodo
