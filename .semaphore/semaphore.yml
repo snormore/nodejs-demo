@@ -18,4 +18,4 @@ blocks:
               "TARGET_IMAGE=registry.digitalocean.com/snormore/hello-next"
               snormore/pack
       secrets:
-        - name: registry-snodo
+        - name: registry-do-snormore
