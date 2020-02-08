@@ -52,6 +52,5 @@ jobs:
         auth_token: ${{ secrets.APPSAIL_TOKEN }}
         app_name: nodejs-demo
         app_deployment: default
-        app_team: 
 
 # EOF
