@@ -5,14 +5,14 @@
 #   CLI Version:        0.0.22
 #   Pipeline Service:   GitHub Actions 
 #   App Name:           nodejs-demo
-#   Deployment:         staging
+#   Deployment:         default
 #   Team:               
 #
 #   Documentation:      https://cloud.digitalocean.com/appsail/docs/pipelines
 #
 ###############################################################################
 
-name: Deploy_nodejs-demo_staging
+name: Deploy_nodejs-demo_default
 
 
 # Triggers
@@ -51,7 +51,7 @@ jobs:
       with:
         auth_token: ${{ secrets.APPSAIL_TOKEN }}
         app_name: nodejs-demo
-        app_deployment: staging
+        app_deployment: default
         app_team: 
 
 # EOF
